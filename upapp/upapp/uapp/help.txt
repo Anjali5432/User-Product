@@ -1,0 +1,26 @@
+1st step - http request comes to the Dispatcher Servlet.
+2nd Step - Dispatcher Servlet asks Handler Mapping that which Controller is responsible for processing the request.
+3rd Step - Handler Mapping will send all the details of the Controller to the Dispatcher Servlet.
+4th Step- Dispatcher Servlet will send the requst to the corresponding Controller.
+5th Step - Controller will return name of the view (web page) to the Dispatcher Servlet...Ex-"Anjali"
+6th Step - Dispatcher Servlet gives the name of the view(web page) to the View Resolver to get the actual path of that View(Web page).
+7th Step - View Resolver will return the actual path(actual View's location and extension) of that View(Web Page) to the Dispatcher Servlet...Ex-"/WEB-INF/views/Anjali.jsp";
+8th Step - Dispatcher Servlet will send the actual path of the View(Web Page) to the View Engine.
+9th Step - View Engine will merge the View Template to the View(Web page)  to produce the final View(plain HTML file) and send it to the Dispatcher Servlet.
+10th Step - Dispatcher Servlet will return the final View(plain HTML file) to the Web Browser.
+
+
+
+
+
+
+
+handler mapping--
+	input-request from Dispatcher Servlet
+	output--name of the controller that you want to use/execute.
+
+Controller--
+	input-request from Dispatcher Servlet
+	output-object of ModelAndView after executing the handler method
+
+
